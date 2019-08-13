@@ -2,32 +2,76 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.Item_One img {
+  width:30%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Title h1 {
+  color: deeppink;
+  font-size: 50px;
+}
+
+.container {
+  padding-top: 20px;
+  display: flex; 
+  padding-left:20%; 
+  padding-right: 20%;  
+}
+
+.series {
+  flex:1;
+  position:relative;
+  width:250px;
+  height: 350px;
+  border: 5px solid white;
+  overflow:hidden;
+
+}
+
+.container img {
+  width:250px;
+  height: 350px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: -100px;
+  background-color:black;
+  width:100%;
   color: white;
+  opacity: .9;
+  transition: bottom ease 1s; 
+
 }
 
-.App-link {
-  color: #61dafb;
+.series:hover .overlay {
+   display: block;
+   opacity: .9;
+   bottom:0;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*for mobile devices only*/
+
+@media only screen and (max-width:600px) {
+  .container {
+    display: block;
+    width:100%;
+    padding-left:0;
+    padding-right:0;
+    padding-top:0px;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .overlay {
+    left:0px;
+    bottom:3px;
   }
+
+  .Title h1 {
+    font-size: 30px;
+  }
+
+
 }
+
